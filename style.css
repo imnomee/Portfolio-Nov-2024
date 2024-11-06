@@ -1,0 +1,165 @@
+@font-face {
+    font-family: noms;
+    src: url('./Neue.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: noms, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+#main {
+    overflow-x: hidden;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100vw;
+    background: #efeae3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav {
+    padding: 1vw 2vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo img {
+    height: 100px;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-right h4 {
+    padding: 10px 20px;
+    border: 1px solid #8a8a8a89;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+nav h4::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    left: 0;
+    bottom: -100%;
+    border-radius: 30%;
+    transition: all ease 0.4s;
+}
+
+nav h4:hover::after {
+    bottom: 0;
+}
+
+nav h4 a {
+    text-decoration: none;
+    color: #000000bb;
+    z-index: 9;
+    position: relative;
+    transition: all ease 0.3s;
+}
+nav h4:hover a {
+    color: #fff;
+}
+
+#center {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #00000055;
+    padding-bottom: 2.5vw;
+}
+#center .left h3 {
+    width: 25vw;
+    font-weight: 2vw;
+    line-height: 2vw;
+}
+#center .right h1 {
+    font-size: 9vw;
+    line-height: 9vw;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+#page1 video {
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 3vw;
+    position: relative;
+}
+
+#hero-anim {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 67vh;
+}
+
+#hero-anim-1 {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: #fe320a;
+    filter: blur(20px);
+    position: absolute;
+}
+#hero-anim-2 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: linear-gradient(#fe320a, #fe570a);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation: shape-anim-2 4s linear alternate infinite;
+}
+#hero-anim-3 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: linear-gradient(#fe320a, #fe570a);
+    border-radius: 50%;
+    filter: blur(30px);
+    animation: shape-anim-1 3s linear alternate infinite;
+}
+@keyframes shape-anim-1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+    to {
+        transform: translate(0, 10%);
+    }
+}
+@keyframes shape-anim-2 {
+    from {
+        transform: translate(5%, -3%);
+    }
+    to {
+        transform: translate(10%, 20%);
+    }
+}

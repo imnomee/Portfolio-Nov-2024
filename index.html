@@ -4,109 +4,41 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Noman Rafiq - Portfolio</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
-                    'Trebuchet MS', sans-serif;
-            }
-            body {
-                background: rgb(0, 30, 0);
-                color: white;
-            }
-            nav {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                height: 100px;
-                background: rgb(5, 50, 5);
-            }
-            nav ul {
-                display: flex;
-                justify-content: center;
-            }
-            nav ul li {
-                list-style: none;
-                margin: 0 20px;
-            }
-            nav ul li a {
-                text-decoration: none;
-                color: inherit;
-                font-size: 1.05rem;
-            }
-            nav ul li a:hover {
-                color: lavender;
-            }
-            .left {
-                font-size: 2rem;
-                font-weight: 900;
-            }
-            .firstSection {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-            }
-            .firstSection > div {
-                width: 30%;
-            }
-            .rightSection img {
-                width: 80%;
-                margin: 50px auto;
-            }
-            .leftSection {
-                font-size: 3rem;
-                text-align: center;
-                margin: 30px 0;
-            }
-            .green {
-                color: greenyellow;
-            }
-        </style>
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="left">Nomee's Portfolio</div>
-                <div class="right">
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
+        <div id="main">
+            <div id="page1">
+                <nav id="nav">
+                    <div class="logo">
+                        <img src="./images/logo.svg" alt="" />
+                    </div>
+                    <div class="nav-right">
+                        <h4><a href="">Work</a></h4>
+                        <h4><a href="">Studio</a></h4>
+                        <h4><a href="">Contact</a></h4>
+                    </div>
+                </nav>
+                <div id="center">
+                    <div class="left">
+                        <h3>
+                            Sundown is a multi-disciplinary studio focused on
+                            creating unique, end-to-end experience and
+                            enviroments
+                        </h3>
+                    </div>
+                    <div class="right">
+                        <h1>SPACE<br />THAT<br />INSPIRE</h1>
+                    </div>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <section class="firstSection">
-                <div class="leftSection">
-                    <p>Hi, My name is <span class="green">Nomee</span></p>
-                    <p>
-                        and I am a
-                        <span class="green" id="element"></span>
-                    </p>
+                <div id="hero-anim">
+                    <div id="hero-anim-1"></div>
+                    <div id="hero-anim-2"></div>
+                    <div id="hero-anim-3"></div>
                 </div>
-
-                <div class="rightSection">
-                    <img src="./images/Developer.svg" alt="" />
-                </div>
-            </section>
-        </main>
-        <!-- Setup and start animation! -->
-        <script>
-            var typed = new Typed('#element', {
-                strings: [
-                    'Web Developer',
-                    'Graphic Designer',
-                    ' Web Designer',
-                    '&amp; Full Stack Developer',
-                ],
-                typeSpeed: 100,
-            });
-        </script>
+                <video autoplay loop muted src="./images/video.mp4"></video>
+            </div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
