@@ -17,12 +17,12 @@ body {
 }
 #main {
     overflow-x: hidden;
+    background: #efeae3;
 }
 
 #page1 {
     min-height: 100vh;
     width: 100vw;
-    background: #efeae3;
     position: relative;
     padding: 0 2vw;
 }
@@ -161,5 +161,49 @@ nav h4:hover a {
     }
     to {
         transform: translate(10%, 20%);
+    }
+}
+
+/* Page 2 */
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 1.5vw 0;
+}
+
+.moving-text {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+.moving-text::-webkit-scrollbar {
+    display: none;
+}
+.container {
+    white-space: nowrap;
+    display: flex;
+    animation: moving-text 20s linear infinite;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    font-size: 5vw;
+    display: inline-block;
+}
+.container .circle {
+    background: orangered;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1.5vw 2vw;
+}
+
+@keyframes moving-text {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
