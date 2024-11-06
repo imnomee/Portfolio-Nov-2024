@@ -182,7 +182,7 @@ nav h4:hover a {
 .container {
     white-space: nowrap;
     display: flex;
-    animation: moving-text 20s linear infinite;
+    animation: moving-text 20s linear infinite alternate;
 }
 
 .container h1 {
@@ -206,4 +206,63 @@ nav h4:hover a {
     to {
         transform: translateX(-100%);
     }
+}
+
+#page2-detail {
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw;
+    position: relative;
+}
+
+#page2-detail h1 {
+    font-size: 3vw;
+    width: 55%;
+    line-height: 3vw;
+    letter-spacing: 2px;
+    z-index: 9;
+}
+
+#page2-detail .right {
+    width: 25%;
+}
+.right img {
+    width: 100%;
+    border-radius: 15px;
+}
+.right p {
+    text-align: justify;
+    line-height: 30px;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+#page2 #anim2 {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top, #fe320a, #fe570a);
+    top: 20%;
+    left: 25%;
+    filter: blur(25px);
+    animation: anim-2 5s ease-in-out infinite alternate;
+}
+
+@keyframes anim-2 {
+    from {
+        transform: translate(10%, -10%) skew(0);
+    }
+    to {
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+/* Page 3 */
+#page3 {
+    min-height: 60vh;
+    width: 100%;
 }
